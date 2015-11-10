@@ -1,0 +1,17 @@
+{
+    "contents" : "\n\n\n#' Convert SAS datetime string to R posix Datetime\n#'\n#' @param String\n#'\n#' @return Posix Datetime\n#' @export\n#'\n#' @examples\n#' parseSASDatetime(\"09DEC2012:01:29:11\")\nparseSASDatetime <- function(sdate){\n  #require(lubridate)\n  months <- list()\n  months[\"JAN\"] <- \"01\"\n  months[\"FEB\"] <- \"02\"\n  months[\"MAR\"] <- \"03\"\n  months[\"APR\"] <- \"04\"\n  months[\"MAY\"] <- \"05\"\n  months[\"JUN\"] <- \"06\"\n  months[\"JUL\"] <- \"07\"\n  months[\"AUG\"] <- \"08\"\n  months[\"SEP\"] <- \"09\"\n  months[\"OCT\"] <- \"10\"\n  months[\"NOV\"] <- \"11\"\n  months[\"DEC\"] <- \"12\"\n  day <- substr(sdate,1,2)\n  month <- months[substr(sdate,3,5)]\n  year <- substr(sdate,6,9)\n  hour <- substr(sdate,11,12)\n  minute <- substr(sdate,14,15)\n  second <- substr(sdate,17,18)\n  date <- paste(year,month,day,sep=\"-\")\n  time <- paste(hour,minute,second,sep=\":\")\n  return(lubridate::ymd_hms(paste(date,time)))\n}\n\n#' Parse CSV output from PTAGIS query\n#'\n#' @param data.frame\n#'\n#' @return data.frame with simplified variable names and parsed dates\n#' @export\n#'\n#' @examples\n#' parseDetections(df)\nparseDetections <- function(df){\n  data(PTAGIS.species)\n  data(GRJAntennaGroups)\n  names(df) <- c(\"Sortid1\",\"tag\",\"mfile\",\"release\",\"smp.group\",\"rel.site\",\"SRRCode\",\"SRRName\",\"MonitorMod\",\"Remove\",\"Fraction\",\"nDetLT1day\",\"mon1\",\"ant1\",\"date1\",\"smp.date1\",\"mon2\",\"ant2\",\"date2\",\"smp.date2\",\"mon3\",\"ant3\",\"date3\",\"smp.date3\",\"mon4\",\"ant4\",\"date4\",\"smp.date4\",\"nDetGT1day\",\"MarkYear\",\"ObsYear\",\"Mnum\",\"YearDiff\",\"DOY\",\"Sortid2\")\n  df$date1 <- parseSASDatetime(df$date1)\n  df$date2 <- parseSASDatetime(df$date2)\n  df$smp.date1 <- lubridate::mdy(df$smp.date1)\n  df$smp.date2<- lubridate::mdy(df$smp.date2)\n  #put last detected sites in order for visualizations\n  df$mon2 <- factor(df$mon2, levels=rev(GRJAntennaGroups$antenna_group))\n  df <- merge(df,PTAGIS.species)\n  return (df)\n}\n\n#' Extract subyearling Fall Chinook from full detection dataset\n#'\n#' @param parsed data.frame\n#'\n#' @return data.frame\n#' @export\n#'\n#' @examples\n#' subs <- getSubyearlings(dataset)\ngetSubyearlings <- function(df){\n  return (dplyr::filter(df,MarkYear==lubridate::year(date1),release != \"\", release != \"YEARLING\"))\n}\n\n#' Extract Yearling Fall Chinook from full detection dataset\n#'\n#' @param data.frame\n#'\n#' @return data.frame\n#' @export\n#'\n#' @examples\n#' yls <- getYearlings(dataset)\ngetYearlings <- function(df){\n  return (dplyr::filter(df,release == \"YEARLING\"))\n}\n\n\n\n",
+    "created" : 1444853149804.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3886831266",
+    "id" : "AD83B92E",
+    "lastKnownWriteTime" : 1445360720,
+    "path" : "~/SMP/RSmoltMon/R/LoadParseData.R",
+    "project_path" : "R/LoadParseData.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

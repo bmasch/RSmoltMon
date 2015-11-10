@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1446142987831.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B8375F8B",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "oomopadeyn",
+        "caption" : "mt",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=mt&cache_key=oomopadeyn",
+        "displayedObservations" : "56341",
+        "environment" : "",
+        "object" : "mt",
+        "totalObservations" : "56341",
+        "variables" : "2"
+    },
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

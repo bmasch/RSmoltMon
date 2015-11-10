@@ -1,0 +1,9 @@
+{
+    "path" : "~/SMP/RSmoltMon",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

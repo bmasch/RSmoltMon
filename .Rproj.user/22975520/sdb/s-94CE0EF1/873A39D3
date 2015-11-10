@@ -1,0 +1,18 @@
+{
+    "contents" : "#roxygen2::roxygenise()\n#devtools::use_data(PTAGIS.IntSites,PTAGIS.MRRSites,overwrite=TRUE)\n\n#' PTAGIS Interrogation Sites\n#'\n#' A dataframe with the PIT-tag Interrogation Sites\n#'\n#' @format A data frame with 336 rows and 18 variables:\n#' \\describe{\n#'   \\item{price}{price, in US dollars}\n#'   \\item{carat}{weight of the diamond, in carats}\n#'   ...\n#' }\n#' @source \\url{http://www.ptagis.org/}\n\"PTAGIS.IntSites\"\n\n#extract and rename PTAGIS.IntSites from PTAGIS\nrenameIntSites <- function(df){\n  df <- select(df,Int.Site.Code,Int.Site.Description,Site.Type.Name,Interrogation.Site.RKM.Value,Interrogation.Site.RKM.Total,Latitude.Value,Longitude.Value,Interrogation.Site.Subbasin.Code)\n  names(df) <- c(\"obs.site\",\"obs.site.desc\",\"obs.site.type\",\"obs.site.rkm\",\"obs.site.rkmtotal\",\"obs.site.latitude\",\"obs.site.longitude\",\"obs.site.subbasin\")\n  return(df)\n}\n\n#' PTAGIS MRR Sites\n#'\n#' A dataframe with the PIT-tag MRR Sites\n#'\n#' @format A data frame with 336 rows and 18 variables:\n#' \\describe{\n#'   \\item{price}{price, in US dollars}\n#'   \\item{carat}{weight of the diamond, in carats}\n#'   ...\n#' }\n#' @source \\url{http://www.ptagis.org/}\n\"PTAGIS.MRRSites\"\n\n#extract and rename PTAGIS.MRRSites from PTAGIS\nrenameMRRSites <- function(df){\n  df <- df[1:8,]\n  names(df) <- c(\"rel.site\",\"rel.site.desc\",\"rel.site.rkm\",\"rel.site.type\",\"rel.site.subbasin\",\"subbasin.name\",\"rel.site.latitude\",\"rel.site.longitude\")\n  return(df)\n}\n",
+    "created" : 1445101597209.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2886919544",
+    "id" : "873A39D3",
+    "lastKnownWriteTime" : 1445113060,
+    "path" : "~/SMP/RSmoltMon/R/datasets.R",
+    "project_path" : "R/datasets.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

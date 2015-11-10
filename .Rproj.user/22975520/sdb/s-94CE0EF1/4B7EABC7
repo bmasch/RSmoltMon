@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1445459024851.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "4B7EABC7",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "rsn5le440u",
+        "caption" : "sample.data",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=sample.data&cache_key=rsn5le440u",
+        "displayedObservations" : 221,
+        "environment" : "",
+        "object" : "sample.data",
+        "totalObservations" : 221,
+        "variables" : 14
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1446233385568.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "869B8D22",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "j5nmrzgytj",
+        "caption" : "mt5",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=mt5&cache_key=j5nmrzgytj",
+        "displayedObservations" : 56341,
+        "environment" : "",
+        "object" : "mt5",
+        "totalObservations" : 56341,
+        "variables" : 3
+    },
+    "relative_order" : 13,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1446243620205.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "6E843344",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "r9vgkprc2w",
+        "caption" : "sd2",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=sd2&cache_key=r9vgkprc2w",
+        "displayedObservations" : 145421,
+        "environment" : "",
+        "object" : "sd2",
+        "totalObservations" : 145421,
+        "variables" : 6
+    },
+    "relative_order" : 16,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

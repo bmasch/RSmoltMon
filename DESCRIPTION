@@ -1,0 +1,16 @@
+Package: RSmoltMon
+Type: Package
+Title: Tools for analysis of SMP PIT-tag data
+Version: 0.1
+Date: 2015-10-14
+Author: Brian Maschhoff
+Maintainer: <brianm@salmonetics.com>
+Description: Functions for analysis of PIT-tag and sample tank count data
+License: What license is it under?
+LazyData: TRUE
+Imports:
+  dplyr,
+  lubridate,
+  ggplot2,
+  reshape2,
+  scales

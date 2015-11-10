@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1446229513114.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CCA69713",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "1mtdexqk8h",
+        "caption" : "sps",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=sps&cache_key=1mtdexqk8h",
+        "displayedObservations" : 2303,
+        "environment" : "",
+        "object" : "sps",
+        "totalObservations" : 2303,
+        "variables" : 39
+    },
+    "relative_order" : 12,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

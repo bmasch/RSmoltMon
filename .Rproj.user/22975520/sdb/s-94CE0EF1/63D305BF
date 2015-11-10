@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1446143404475.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "63D305BF",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "gc6i9x2q8a",
+        "caption" : "mt1",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=mt1&cache_key=gc6i9x2q8a",
+        "displayedObservations" : 27453,
+        "environment" : "",
+        "object" : "mt1",
+        "totalObservations" : 27453,
+        "variables" : 2
+    },
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
